@@ -79,6 +79,14 @@
             font-size: 18px;
         }
 
+        .promoBox {
+            margin: 20px auto; 
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
         table {
             width: 300px;
             border-collapse: collapse;
@@ -100,7 +108,7 @@
             background: white;
         }
 
-        .container {
+        .orderBox {
             margin: 50px auto; 
             max-width: 800px;
             padding: 20px;
@@ -166,6 +174,13 @@
             padding: 0;
         }
 
+        footer{
+            color: rgb(121, 74, 165);
+            background-color: rgb(237, 214, 248);
+            padding: 20px;
+            margin: 30px -20px -20px -20px;
+            text-align: center;
+        }
 
     </style>
 </head>
