@@ -44,8 +44,7 @@
         'December' => 'Buy 1 Get 1 Free on selected albums!',
         default => 'No promotions going on at the moment.',
     };
- 
-
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -96,14 +95,6 @@
             font-size: 18px;
         }
 
-        .promoBox {
-            margin: 20px auto; 
-            padding: 20px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
         table {
             width: 300px;
             border-collapse: collapse;
@@ -128,6 +119,14 @@
         .orderBox {
             margin: 50px auto; 
             max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .promoBox {
+            margin: 20px auto; 
             padding: 20px;
             background-color: white;
             border-radius: 15px;
@@ -212,6 +211,7 @@
      <p>︵⊹︵︵୨୧︵︵⊹︵︵⊹︵︵୨୧︵︵⊹︵</p>
     
     <h2>Available Groups</h2>
+    
     <h3>Boy Groups:</h3>
     <ul>
         <?php foreach ($boyGroup as $group) echo "<li>$group</li>"; ?>
@@ -232,7 +232,7 @@
 
     <p>︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</p>
 
-   <table>
+    <table>
         <tr>
             <th>Lightsticks</th>
             <th>Price</th>
@@ -246,13 +246,12 @@
             <th>Albums</th>
             <th>Price</th>
         </tr>
-        <?php foreach ($albumPrices as $group => $price) echo 
-        "<tr><td>$group Album</td><td>$$price</td></tr>"; ?>
+        <?php foreach ($albumPrices as $group => $price) echo "<tr><td>$group Album</td><td>$$price</td></tr>"; ?>
             
     </table>
 
     <!-- for ordering -->
-    <div class="container">
+    <div class="orderBox">
     
         <h2>Contact Information</h3>
         <p>Add your details here for further information about your order! (｡•̀ᴗ-)✧</p>
@@ -285,83 +284,75 @@
         <h3>★ Lightsticks:</h3>
         <p>BTS - $<?= $lightstickPrices['BTS'] ?>
         <select id="btsLightstick">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <p>BOYNEXTDOOR - $<?= $lightstickPrices['BOYNEXTDOOR'] ?>
         <select id="bndLightstick">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <p>New Jeans - $<?= $lightstickPrices['New Jeans'] ?>
         <select id="njLightstick">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <p>Twice - $<?= $lightstickPrices['Twice'] ?>
         <select id="twiceLightstick">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <h3>♬ Albums:</h3>
         <p>BTS - $<?= $albumPrices['BTS'] ?>
         <select id="btsAlbum">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <p>BOYNEXTDOOR - $<?= $albumPrices['BOYNEXTDOOR'] ?>
         <select id="bndAlbum">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <p>New Jeans - $<?= $albumPrices['New Jeans'] ?>
         <select id="njAlbum">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <p>Twice - $<?= $albumPrices['Twice'] ?>
         <select id="twiceAlbum">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
+            <?php 
+            for ($i = 0; $i <= 5; $i++) {
+                echo "<option value=\"$i\">$i</option>";
+            }
+            ?>
         </select></p>
 
         <button onclick="showBill()">Place Order</button>
