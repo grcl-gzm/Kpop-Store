@@ -28,6 +28,14 @@
         "Twice" => 35
     ];
 
+    // Lightstick names
+    $lightstickNames = [
+        "BTS" => "Army Bomb - BTS",
+        "BOYNEXTDOOR" => "Wonder Stick - BOYNEXTDOOR",
+        "New Jeans" => "Binky Bong - New Jeans",
+        "Twice" => "Candy Bong - Twice"
+    ];
+
     // Promo
     $month = 'November';
 
