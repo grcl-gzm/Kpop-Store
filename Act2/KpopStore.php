@@ -1,7 +1,7 @@
 <!-- 
  Name: Graciela C. Gozum
  Section: WD-201
- Date: 11/28/2025
+ Date: 11/29/2025
 
 -------------------------------------------------
  DWEB: Assignment Activity 2
@@ -360,6 +360,7 @@
 
     <script>
     function showBill() {
+
         // Initializes the items and the total price
         var itemsList = "";
         var total = 0;
@@ -415,7 +416,7 @@
 
         if (total > 0) {
             var subtotal = total;
-            var discount = total * 0.25; // 25% discount
+            var discount = total * 0.25; // 25% discount from the promo
             var finalTotal = total - discount;
             
             alert("Items selected:\n" + itemsList + "\n" +
