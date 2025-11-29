@@ -204,11 +204,14 @@
      <p>︵⊹︵︵୨୧︵︵⊹︵︵⊹︵︵୨୧︵︵⊹︵</p>
     
     <h2>Available Groups</h2>
+    <h3>Boy Groups:</h3>
     <ul>
-        <li><?= $boyGroup[0] ?></li>
-        <li><?= $boyGroup[1] ?></li>
-        <li><?= $girlGroup[0] ?></li>
-        <li><?= $girlGroup[1] ?></li>
+        <?php foreach ($boyGroup as $group) echo "<li>$group</li>"; ?>
+    </ul>
+            
+    <h3>Girl Groups:</h3>
+    <ul>
+        <?php foreach ($girlGroup as $group) echo "<li>$group</li>"; ?>
     </ul>
     
     <h2>Available Products</h2>
@@ -221,15 +224,13 @@
 
     <p>︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</p>
 
-    <table>
+   <table>
         <tr>
             <th>Lightsticks</th>
             <th>Price</th>
         </tr>
-        <tr><td>Army Bomb - BTS</td><td><?= $lightstickPrices['BTS']?></td></tr>
-        <tr><td>Wonder Stick - BOYNEXTDOOR</td><td><?= $lightstickPrices['BOYNEXTDOOR']?></td></tr>
-        <tr><td>Binky Bong - New Jeans</td><td><?= $lightstickPrices['New Jeans']?></td></tr>
-        <tr><td>Candy Bong - Twice</td><td><?= $lightstickPrices['Twice']?></td></tr>
+        <?php foreach ($lightstickNames as $group => $name) echo
+        "<tr><td>$name</td><td>$$lightstickPrices[$group]</td></tr>"; ?>
     </table>
 
     <table>
@@ -237,11 +238,9 @@
             <th>Albums</th>
             <th>Price</th>
         </tr>
-        <tr><td>BTS</td><td><?= $albumPrices['BTS']?></td></tr>
-        <tr><td>BOYNEXTDOOR</td><td><?= $albumPrices['BOYNEXTDOOR']?></td></tr>
-        <tr><td>New Jeans</td><td><?= $albumPrices['New Jeans']?></td></tr> 
-        <tr><td>Twice</td><td><?= $albumPrices['Twice']?></td></tr>
-
+        <?php foreach ($albumPrices as $group => $price) echo 
+        "<tr><td>$group Album</td><td>$$price</td></tr>"; ?>
+            
     </table>
 
     <!-- for ordering -->
