@@ -20,7 +20,7 @@
     $boyGroup = ["BTS", "BOYNEXTDOOR"];
     $girlGroup = ["New Jeans", "Twice"];
 
-    // prices of lightsticks and albums
+    // Prices of lightsticks and albums
     $lightstickPrices = [
         "BTS" => 79.99,
         "BOYNEXTDOOR" => 75.50,
@@ -225,7 +225,7 @@
 
     </table>
 
-    <!-- for ordering -->
+    <!-- For ordering -->
     <div class="container">
     
         <h2>Contact Information</h3>
