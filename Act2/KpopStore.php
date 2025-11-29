@@ -15,18 +15,27 @@
 
     // prices of lightsticks and albums
     $lightstickPrices = [
-        "BTS" => 79.99,
-        "BOYNEXTDOOR" => 75.50,
-        "New Jeans" => 72.00,
-        "Twice" => 80.00
+        "BTS" => 80,
+        "BOYNEXTDOOR" => 75,
+        "New Jeans" => 72,
+        "Twice" => 80
     ];
 
     $albumPrices = [
-        "BTS" => 25.00,
-        "BOYNEXTDOOR" => 20.00,
-        "New Jeans" => 30.00,
-        "Twice" => 26.00
+        "BTS" => 45,
+        "BOYNEXTDOOR" => 40,
+        "New Jeans" => 30,
+        "Twice" => 35
     ];
+
+    // Promo
+    $month = 'November';
+
+    $sale = match ($month) {
+        'November' => 'Get 10% off on all items!',
+        'December' => 'Buy 1 Get 1 Free on selected albums!',
+        default => 'No promotions going on at the moment.',
+    };
  
 
 ?>
@@ -187,6 +196,11 @@
 <body>
     <?php include 'headerStore.php'; ?>
 
+    <div class="promoBox">
+        <h2>Ongoing Promotion for <?= $month ?> </h2>
+        <p>This Black Friday Sale! <?= $sale ?></p>
+    </div>
+
      <p>︵⊹︵︵୨୧︵︵⊹︵︵⊹︵︵୨୧︵︵⊹︵</p>
     
     <h2>Available Groups</h2>
@@ -254,7 +268,7 @@
                 alert('Please enter your name and email before submitting.');
                 return;
             }
-            alert('Contact information submitted. Thank you, ' + name + '! You may now proceed to place your order (^o^)!');
+            alert('Contact information submitted. Thank you, ' + name + '! You can now proceed to place your order (^o^)!');
         }
         </script>
 
@@ -262,7 +276,7 @@
 
         <h2>Order Here!</h2>
         <h3>★ Lightsticks:</h3>
-        <p>BTS - $80 
+        <p>BTS - $<?= $lightstickPrices['BTS'] ?>
         <select id="btsLightstick">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -271,8 +285,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
-        
-        <p>BOYNEXTDOOR - $76 
+
+        <p>BOYNEXTDOOR - $<?= $lightstickPrices['BOYNEXTDOOR'] ?>
         <select id="bndLightstick">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -281,8 +295,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
-        
-        <p>New Jeans - $72 
+
+        <p>New Jeans - $<?= $lightstickPrices['New Jeans'] ?>
         <select id="njLightstick">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -291,8 +305,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
-        
-        <p>Twice - $80 
+
+        <p>Twice - $<?= $lightstickPrices['Twice'] ?>
         <select id="twiceLightstick">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -303,7 +317,7 @@
         </select></p>
 
         <h3>♬ Albums:</h3>
-        <p>BTS - $25 
+        <p>BTS - $<?= $albumPrices['BTS'] ?>
         <select id="btsAlbum">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -312,8 +326,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
-        
-        <p>BOYNEXTDOOR - $20 
+
+        <p>BOYNEXTDOOR - $<?= $albumPrices['BOYNEXTDOOR'] ?>
         <select id="bndAlbum">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -322,8 +336,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
-        
-        <p>New Jeans - $30 
+
+        <p>New Jeans - $<?= $albumPrices['New Jeans'] ?>
         <select id="njAlbum">
             <option value="0">0</option>
             <option value="1">1</option>
@@ -332,8 +346,8 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select></p>
-        
-        <p>Twice - $26 
+
+        <p>Twice - $<?= $albumPrices['Twice'] ?>
         <select id="twiceAlbum">
             <option value="0">0</option>
             <option value="1">1</option>
