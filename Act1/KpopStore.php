@@ -336,6 +336,7 @@
 
     <script>
     function showBill() {
+        // Initializes the items and the total price
         var itemsList = "";
         var total = 0;
         
