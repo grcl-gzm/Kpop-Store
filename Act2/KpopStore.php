@@ -40,8 +40,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Iceland&family=Jersey+25&display=swap');
 
         body {
-            background: linear-gradient(135deg, #f6edf5 0%, #e8d5f0 12%, #f0e6f7 24%, #e6f3ff 36%,
-             #fff0e6 48%, #f0fff0 60%, #ffe6f0 72%, #f6edf5 84%, #ead9f2 100%);
+            background: linear-gradient(135deg, #f6edf5 0%, #e8d5f0 12%, #f0e6f7 24%, #e6f3ff 36%, #fff0e6 48%
+            , #f0fff0 60%, #ffe6f0 72%, #f6edf5 84%, #ead9f2 100%);
             min-height: 100vh;
             font-family: 'Figtree', sans-serif;
             margin: 20px;
@@ -191,7 +191,7 @@
         <li>Albums</li>
     </ul>
 
-    <p>More coming soon!! (˵ •̀ ᴗ - ˵) ✧</p>
+    <p>More coming soon!!</p>
 
     <p>︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</p>
 
@@ -336,6 +336,7 @@
 
     <script>
     function showBill() {
+
         alert("Thank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
     }
     </script>
