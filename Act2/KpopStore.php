@@ -40,8 +40,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Iceland&family=Jersey+25&display=swap');
 
         body {
-            background: linear-gradient(135deg, #f6edf5 0%, #e8d5f0 12%, #f0e6f7 24%, #e6f3ff 36%, #fff0e6 48%
-            , #f0fff0 60%, #ffe6f0 72%, #f6edf5 84%, #ead9f2 100%);
+            background: linear-gradient(135deg, #f6edf5 0%, #e8d5f0 12%, #f0e6f7 24%, #e6f3ff 36%,
+             #fff0e6 48%, #f0fff0 60%, #ffe6f0 72%, #f6edf5 84%, #ead9f2 100%);
             min-height: 100vh;
             font-family: 'Figtree', sans-serif;
             margin: 20px;
@@ -336,8 +336,65 @@
 
     <script>
     function showBill() {
+        // Initializes the items and the total price
+        var itemsList = "";
+        var total = 0;
+        
+        // Adds and computes the selected merch and prints the bill
+        var qty = parseInt(document.getElementById('btsLightstick').value);
+        if (qty > 0) { 
+            itemsList += qty + " Army Bomb - BTS" + " = $<?= $lightstickPrices['BTS'] ?>"; 
+            total += qty * 79.99; 
+        }
+        
+        qty = parseInt(document.getElementById('bndLightstick').value);
+        if (qty > 0) { 
+            itemsList += qty + " Wonder Stick - BOYNEXTDOOR" + " = $<?= $lightstickPrices['BOYNEXTDOOR'] ?>"; 
+            total += qty * 75.50; 
+        }
 
-        alert("Thank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
+        qty = parseInt(document.getElementById('njLightstick').value);
+        if (qty > 0) { 
+            itemsList += qty + " Binky Bong - New Jeans" + " = $<?= $lightstickPrices['New Jeans'] ?>"; 
+            total += qty * 72.00; 
+        }
+
+        qty = parseInt(document.getElementById('twiceLightstick').value);
+        if (qty > 0) { 
+            itemsList += qty + " Candy Bong - Twice" + " = $<?= $lightstickPrices['Twice'] ?>"; 
+            total += qty * 80.00; 
+        }
+
+        qty = parseInt(document.getElementById('btsAlbum').value);
+        if (qty > 0) { 
+            itemsList += qty + " BTS Album" + " = $<?= $albumPrices['bts'] ?>"; 
+            total += qty * 25.00; 
+        }
+
+        qty = parseInt(document.getElementById('bndAlbum').value);
+        if (qty > 0) { 
+            itemsList += qty + " BOYNEXTDOOR Album" + " = $<?= $albumPrices['boynextdoor'] ?>"; 
+            total += qty * 20.00; 
+        }
+
+        qty = parseInt(document.getElementById('njAlbum').value);
+        if (qty > 0) { 
+            itemsList += qty + " New Jeans Album" + " = $<?= $albumPrices['newJeans'] ?>"; 
+            total += qty * 30.00; 
+        }
+
+        qty = parseInt(document.getElementById('twiceAlbum').value);
+        if (qty > 0) { 
+            itemsList += qty + " Twice Album" + " = $<?= $albumPrices['twice'] ?>"; 
+            total += qty * 26.00; 
+        }
+
+        if (total > 0) {
+            alert("Items selected:\n" + itemsList + "\nTotal: $" + total 
+            + "\n\nThank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
+        } else {
+            alert("Please select at least one item!");
+        }
     }
     </script>
 
