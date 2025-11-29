@@ -369,55 +369,63 @@
         // Adds and computes the selected merch and prints the bill
         var qty = parseInt(document.getElementById('btsLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Army Bomb - BTS" + " = $<?= $lightstickPrices['BTS'] ?>"; 
+            itemsList += qty + " Army Bomb - BTS" + " = $<?= $lightstickPrices['BTS'] ?> " + "\n"; 
             total += qty * 79.99; 
         }
         
         qty = parseInt(document.getElementById('bndLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Wonder Stick - BOYNEXTDOOR" + " = $<?= $lightstickPrices['BOYNEXTDOOR'] ?>"; 
+            itemsList += qty + " Wonder Stick - BOYNEXTDOOR" + " = $<?= $lightstickPrices['BOYNEXTDOOR'] ?>" + " \n"; 
             total += qty * 75.50; 
         }
 
         qty = parseInt(document.getElementById('njLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Binky Bong - New Jeans" + " = $<?= $lightstickPrices['New Jeans'] ?>"; 
+            itemsList += qty + " Binky Bong - New Jeans" + " = $<?= $lightstickPrices['New Jeans'] ?>" + " \n"; 
             total += qty * 72.00; 
         }
 
         qty = parseInt(document.getElementById('twiceLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Candy Bong - Twice" + " = $<?= $lightstickPrices['Twice'] ?>"; 
+            itemsList += qty + " Candy Bong - Twice" + " = $<?= $lightstickPrices['Twice'] ?>" + " \n"; 
             total += qty * 80.00; 
         }
 
         qty = parseInt(document.getElementById('btsAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " BTS Album" + " = $<?= $albumPrices['bts'] ?>"; 
+            itemsList += qty + " BTS Album" + " = $<?= $albumPrices['BTS'] ?>" + " \n"; 
             total += qty * 25.00; 
         }
 
         qty = parseInt(document.getElementById('bndAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " BOYNEXTDOOR Album" + " = $<?= $albumPrices['boynextdoor'] ?>"; 
+            itemsList += qty + " BOYNEXTDOOR Album" + " = $<?= $albumPrices['BOYNEXTDOOR'] ?>" + " \n"; 
             total += qty * 20.00; 
         }
 
         qty = parseInt(document.getElementById('njAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " New Jeans Album" + " = $<?= $albumPrices['newJeans'] ?>"; 
+            itemsList += qty + " New Jeans Album" + " = $<?= $albumPrices['New Jeans'] ?>" + " \n"; 
             total += qty * 30.00; 
         }
 
         qty = parseInt(document.getElementById('twiceAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " Twice Album" + " = $<?= $albumPrices['twice'] ?>"; 
+            itemsList += qty + " Twice Album" + " = $<?= $albumPrices['Twice'] ?>" + " \n"; 
             total += qty * 26.00; 
         }
 
         if (total > 0) {
-            alert("Items selected:\n" + itemsList + "\nTotal: $" + total 
-            + "\n\nThank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
+            var subtotal = total;
+            var discount = total * 0.10; // 10% discount
+            var finalTotal = total - discount;
+            
+            alert("Items selected:\n" + itemsList + "\n" +
+                "-----------------------------" +
+                  "\nSubtotal: $" + subtotal + 
+                  "\nDiscount (10%): -$" + discount + 
+                  "\nFinal Total: $" + finalTotal + 
+                  "\n\n♡Thank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
         } else {
             alert("Please select at least one item!");
         }
