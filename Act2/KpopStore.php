@@ -1,0 +1,346 @@
+<!-- 
+ Name: Graciela C. Gozum
+ Section: WD-201
+ Date: 11/28/2025
+
+-------------------------------------------------
+ DWEB: Assignment Activity 1
+
+-->
+
+ <?php
+    // Kpop Groups
+    $boyGroup = ["BTS", "BOYNEXTDOOR"];
+    $girlGroup = ["New Jeans", "Twice"];
+
+    // prices of lightsticks and albums
+    $lightstickPrices = [
+        "BTS" => 79.99,
+        "BOYNEXTDOOR" => 75.50,
+        "New Jeans" => 72.00,
+        "Twice" => 80.00
+    ];
+
+    $albumPrices = [
+        "BTS" => 25.00,
+        "BOYNEXTDOOR" => 20.00,
+        "New Jeans" => 30.00,
+        "Twice" => 26.00
+    ];
+ 
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kpop Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Iceland&family=Jersey+25&display=swap');
+
+        body {
+            background: linear-gradient(135deg, #f6edf5 0%, #e8d5f0 12%, #f0e6f7 24%, #e6f3ff 36%,
+             #fff0e6 48%, #f0fff0 60%, #ffe6f0 72%, #f6edf5 84%, #ead9f2 100%);
+            min-height: 100vh;
+            font-family: 'Figtree', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color:rgb(237, 214, 248);
+            padding: 20px;
+            margin: -20px -20px 30px -20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 img {
+            height: 65px;
+        }
+
+        h1 {
+            color:rgb(121, 74, 165);
+            gap: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0;
+        }
+
+        h2 {
+            color:rgb(121, 74, 165);
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        table {
+            width: 300px;
+            border-collapse: collapse;
+            margin: 10px auto;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th {
+            background:rgb(107, 74, 165);
+            color: white;
+            padding: 8px;
+        }
+
+        td {
+            padding: 8px;
+            background: white;
+        }
+
+        .container {
+            margin: 50px auto; 
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #4a6fa5;
+            color: white;
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3b5d8a;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+
+        input[type="email"], input[type="text"] {
+            width: 250px;
+            padding: 8px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        input[type="email"]:focus, input[type="text"]:focus {
+            border-color: #4a6fa5;
+            outline: none;
+        }
+
+        label {
+            font-weight: bold;
+            color: rgb(121, 74, 165);
+        }
+
+        hr {
+            border: none;
+            border-top: 4px dashed rgb(121, 74, 165);
+            margin: 20px 0;
+        }
+
+        ul {
+            margin: 5px auto;
+            padding: 0;
+            list-style-position: inside;
+        }
+
+        li {
+            margin: 2px 0;
+            padding: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+    <h1><img src="https://i.pinimg.com/originals/04/e4/d9/04e4d9c76688a38183b6a96cdc7a4bb0.gif">
+    Kverse Kpop Store</h1>
+    </header>
+
+     <p>︵⊹︵︵୨୧︵︵⊹︵︵⊹︵︵୨୧︵︵⊹︵</p>
+    
+    <h2>Available Groups</h2>
+    <ul>
+        <li><?= $boyGroup[0] ?></li>
+        <li><?= $boyGroup[1] ?></li>
+        <li><?= $girlGroup[0] ?></li>
+        <li><?= $girlGroup[1] ?></li>
+    </ul>
+    
+    <h2>Available Products</h2>
+    <ul>
+        <li>Lightsticks</li>    
+        <li>Albums</li>
+    </ul>
+
+    <p>More coming soon!! (˵ •̀ ᴗ - ˵) ✧</p>
+
+    <p>︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</p>
+
+    <table>
+        <tr>
+            <th>Lightsticks</th>
+            <th>Price</th>
+        </tr>
+        <tr><td>Army Bomb - BTS</td><td><?= $lightstickPrices['BTS']?></td></tr>
+        <tr><td>Wonder Stick - BOYNEXTDOOR</td><td><?= $lightstickPrices['BOYNEXTDOOR']?></td></tr>
+        <tr><td>Binky Bong - New Jeans</td><td><?= $lightstickPrices['New Jeans']?></td></tr>
+        <tr><td>Candy Bong - Twice</td><td><?= $lightstickPrices['Twice']?></td></tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Albums</th>
+            <th>Price</th>
+        </tr>
+        <tr><td>BTS</td><td><?= $albumPrices['BTS']?></td></tr>
+        <tr><td>BOYNEXTDOOR</td><td><?= $albumPrices['BOYNEXTDOOR']?></td></tr>
+        <tr><td>New Jeans</td><td><?= $albumPrices['New Jeans']?></td></tr> 
+        <tr><td>Twice</td><td><?= $albumPrices['Twice']?></td></tr>
+
+    </table>
+
+    <!-- for ordering -->
+    <div class="container">
+    
+        <h2>Contact Information</h3>
+        <p>Add your details here for further information about your order! (｡•̀ᴗ-)✧</p>
+        <p>
+            <label for="customer_email">Email:</label>
+            <input type="email" id="customer_email" name="customer_email" placeholder="Enter your email" required>
+        </p>
+        <p>
+            <label for="customer_name">Name:</label>
+            <input type="text" id="customer_name" name="customer_name" placeholder="Enter your name" required>
+        </p>
+         <button onclick="submitContactInfo()">Submit Contact Info</button>
+
+        <script>
+        function submitContactInfo() {
+            var name = document.getElementById('customer_name').value;
+            var email = document.getElementById('customer_email').value;
+            
+            if (!name || !email) {
+                alert('Please enter your name and email before submitting.');
+                return;
+            }
+            alert('Contact information submitted. Thank you, ' + name + '! You may now proceed to place your order (^o^)!');
+        }
+        </script>
+
+        <hr>
+
+        <h2>Order Here!</h2>
+        <h3>★ Lightsticks:</h3>
+        <p>BTS - $80 
+        <select id="btsLightstick">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        
+        <p>BOYNEXTDOOR - $76 
+        <select id="bndLightstick">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        
+        <p>New Jeans - $72 
+        <select id="njLightstick">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        
+        <p>Twice - $80 
+        <select id="twiceLightstick">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+
+        <h3>♬ Albums:</h3>
+        <p>BTS - $25 
+        <select id="btsAlbum">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        
+        <p>BOYNEXTDOOR - $20 
+        <select id="bndAlbum">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        
+        <p>New Jeans - $30 
+        <select id="njAlbum">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+        
+        <p>Twice - $26 
+        <select id="twiceAlbum">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select></p>
+
+        <button onclick="showBill()">Place Order</button>
+    </div>
+
+    <script>
+    function showBill() {
+        alert("Thank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
+    }
+    </script>
+
+
+
+</body>
+</html>
