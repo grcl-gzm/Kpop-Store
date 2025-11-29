@@ -4,7 +4,7 @@
  Date: 11/28/2025
 
 -------------------------------------------------
- DWEB: Assignment Activity 1
+ DWEB: Assignment Activity 2
 
 -->
 
@@ -170,10 +170,7 @@
     </style>
 </head>
 <body>
-    <header>
-    <h1><img src="https://i.pinimg.com/originals/04/e4/d9/04e4d9c76688a38183b6a96cdc7a4bb0.gif">
-    Kverse Kpop Store</h1>
-    </header>
+    <?php include 'headerStore.php'; ?>
 
      <p>︵⊹︵︵୨୧︵︵⊹︵︵⊹︵︵୨୧︵︵⊹︵</p>
     
@@ -191,7 +188,7 @@
         <li>Albums</li>
     </ul>
 
-    <p>More coming soon!!</p>
+    <p>More groups and merch coming soon!! (˶ᵔ ᵕ ᵔ˶)</p>
 
     <p>︶⊹︶︶୨୧︶︶⊹︶︶⊹︶︶୨୧︶︶⊹︶</p>
 
@@ -398,7 +395,7 @@
     }
     </script>
 
-
+    <?php include 'footerStore.php';?>
 
 </body>
 </html>
