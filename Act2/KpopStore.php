@@ -6,6 +6,15 @@
 -------------------------------------------------
  DWEB: Assignment Activity 2
 
+ Used:
+ Conditional statements
+ - if
+ - if-else
+ Loops 
+ - match
+ - foreach loop
+ - for loop
+
 -->
 
  <?php

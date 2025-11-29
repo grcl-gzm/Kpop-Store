@@ -6,6 +6,13 @@
 -------------------------------------------------
  DWEB: Assignment Activity 1
 
+ Used:
+ - Comments
+ - Shorthand for echo
+ - Associative arrays 
+ - Indexed arrays
+ - Logical and arithmetic operators
+
 -->
 
  <?php
