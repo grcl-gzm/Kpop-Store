@@ -1,26 +1,55 @@
 <!-- 
  Name: Graciela C. Gozum
  Section: WD-201
- Date: 11/29/2025
+ Date: 12/02/2025
 
 -------------------------------------------------
- DWEB: Assignment Activity 2
-
- Used:
- Conditional statements
- - if
- - if-else
- Loops 
- - match
- - foreach loop
- - for loop
+ DWEB: Assignment Activity 3
 
 -->
 
  <?php
+ declare(strict_types=1);
+
     // Kpop Groups
     $boyGroup = ["BTS", "BOYNEXTDOOR"];
     $girlGroup = ["New Jeans", "Twice"];
+
+    // Multidimensional array for the products
+    $kpopMerch = [
+        'Army Bomb - BTS' => [
+            'price' => 80.00,
+            'stock' => 5
+        ],
+        'Wonder Stick - BOYNEXTDOOR' => [
+            'price' => 75.00,
+            'stock' => 15
+        ],
+        'Binky Bong - New Jeans' => [
+            'price' => 72.00,
+            'stock' => 21
+        ],
+        'Candy Bong - Twice' => [
+            'price' => 80.00,
+            'stock' => 8
+        ],
+        'Map of the Soul: 7 Album - BTS ' => [
+            'price' => 60.00,
+            'stock' => 12
+        ],
+        'No Genre Album - BOYNEXTDOOR ' => [
+            'price' => 45.00,
+            'stock' => 10
+        ],
+        'Supernatural Album - New Jeans' => [
+            'price' => 30.00,
+            'stock' => 25
+        ],
+        'Eyes Wide Open Album - Twice' => [
+            'price' => 50.00,
+            'stock' => 18   
+        ],
+    ];
 
     // Prices of lightsticks and albums
     $lightstickPrices = [
