@@ -22,10 +22,10 @@
     ];
 
     $albumPrices = [
-        "BTS" => 45,
-        "BOYNEXTDOOR" => 40,
+        "BTS" => 60,
+        "BOYNEXTDOOR" => 45,
         "New Jeans" => 30,
-        "Twice" => 35
+        "Twice" => 50
     ];
 
     // Lightstick names
