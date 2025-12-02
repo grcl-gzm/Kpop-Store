@@ -69,12 +69,16 @@
 <body>
     <?php include 'headerStore.php'; ?>
 
+    <nav class="navbar">
+        <a href="KpopStore.php" class="nav-link">Store</a>
+        <a href="merchStock.php" class="nav-link active">Merch Inventory</a>
+    </nav>
 
     <!-- For monitoring the current stocks/ available merch -->
     <h2>Merchandise Stock Inventory</h2>
 
     <table>
-        <th>
+        <thead>
             <tr>
                 <th>PRODUCT NAME</th>
                 <th>STOCK</th>
@@ -82,7 +86,7 @@
                 <th>TOTAL VALUE </th>
                 <th>TAX DUE</th>
             </tr>
-        </th>        
+        </thead>        
         <tbody>
             
             <?php foreach ($kpopMerch as $product_name => $data): 
