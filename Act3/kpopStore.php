@@ -276,13 +276,9 @@
         }
 
         if (total > 0) {
-            var subtotal = total;
-            var finalTotal = total - discount;
-            
             alert("Items selected:\n" + itemsList + "\n" +
                 "-----------------------------" +
-                  "\nSubtotal: $" + subtotal + 
-                  "\nFinal Total: $" + finalTotal + 
+                  "\nTotal: $" + total + 
                   "\n\n♡Thank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
         } else {
             alert("Please select at least one item!");
