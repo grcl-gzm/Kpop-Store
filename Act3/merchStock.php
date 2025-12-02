@@ -88,7 +88,8 @@
             </tr>
         </thead>        
         <tbody>
-            
+
+            <!-- Checks the array and loops the price and stock level of the merch -->
             <?php foreach ($kpopMerch as $product_name => $data): 
                 $total_value = get_total_value($data['price'], $data['stockLevel']);
                 $tax_due = get_tax_due($data['price'], $data['stockLevel'], $taxRate);
