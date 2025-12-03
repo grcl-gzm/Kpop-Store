@@ -5,41 +5,41 @@
     $taxRate = 12;  // 12% tax rate - global variable
     
     // Currency symbol for the table
-    $currency = '$';
+    $currency = '₱';
 
 
     // Multidimensional array for the products
     $kpopMerch = [
         'Army Bomb - BTS' => [
-            'price' => 80.00,
+            'price' => 2480.00,
             'stockLevel' => 0
         ],
         'Wonder Stick - BOYNEXTDOOR' => [
-            'price' => 75.00,
+            'price' => 2200.00,
             'stockLevel' => 3
         ],
         'Binky Bong - New Jeans' => [
-            'price' => 72.00,
+            'price' => 2030.00,
             'stockLevel' => 13
         ],
         'Candy Bong - Twice' => [
-            'price' => 80.00,
+            'price' => 2480.00,
             'stockLevel' => 8
         ],
         'Map of the Soul: 7 Album - BTS ' => [
-            'price' => 60.00,
+            'price' => 1360.00,
             'stockLevel' => 12
         ],
         'No Genre Album - BOYNEXTDOOR ' => [
-            'price' => 45.00,
+            'price' => 1520.00,
             'stockLevel' => 10
         ],
         'Supernatural Album - New Jeans' => [
-            'price' => 30.00,
+            'price' => 1680.00,
             'stockLevel' => 3
         ],
         'Eyes Wide Open Album - Twice' => [
-            'price' => 50.00,
+            'price' => 1800.00,
             'stockLevel' => 2   
         ],
     ];

@@ -15,17 +15,17 @@
 
     // Prices of lightsticks and albums
     $lightstickPrices = [
-        "BTS" => 80,
-        "BOYNEXTDOOR" => 75,
-        "New Jeans" => 72,
-        "Twice" => 80
+        "BTS" => 2480,
+        "BOYNEXTDOOR" => 2200,
+        "New Jeans" => 2030,
+        "Twice" => 2480
     ];
 
     $albumPrices = [
-        "BTS" => 60,
-        "BOYNEXTDOOR" => 45,
-        "New Jeans" => 30,
-        "Twice" => 50
+        "BTS" => 1360,
+        "BOYNEXTDOOR" => 1520,
+        "New Jeans" => 1680,
+        "Twice" => 1800
     ];
 
     // Lightstick names
@@ -98,7 +98,7 @@
             <th>Price</th>
         </tr>
         <?php foreach ($lightstickNames as $group => $name) echo
-        "<tr><td>$name</td><td>$$lightstickPrices[$group]</td></tr>"; ?>
+        "<tr><td>$name</td><td>₱$lightstickPrices[$group]</td></tr>"; ?>
     </table>
 
     <table>
@@ -106,7 +106,7 @@
             <th>Albums</th>
             <th>Price</th>
         </tr>
-        <?php foreach ($albumPrices as $group => $price) echo "<tr><td>$group Album</td><td>$$price</td></tr>"; ?>
+        <?php foreach ($albumPrices as $group => $price) echo "<tr><td>$group Album</td><td>₱$price</td></tr>"; ?>
             
     </table>
 
@@ -143,7 +143,7 @@
 
         <h2>Order Here!</h2>
         <h3>★ Lightsticks:</h3>
-        <p>BTS - $<?= $lightstickPrices['BTS'] ?>
+        <p>BTS - ₱<?= $lightstickPrices['BTS'] ?>
         <select id="btsLightstick">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -152,7 +152,7 @@
             ?>
         </select></p>
 
-        <p>BOYNEXTDOOR - $<?= $lightstickPrices['BOYNEXTDOOR'] ?>
+        <p>BOYNEXTDOOR - ₱<?= $lightstickPrices['BOYNEXTDOOR'] ?>
         <select id="bndLightstick">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -161,7 +161,7 @@
             ?>
         </select></p>
 
-        <p>New Jeans - $<?= $lightstickPrices['New Jeans'] ?>
+        <p>New Jeans - ₱<?= $lightstickPrices['New Jeans'] ?>
         <select id="njLightstick">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -170,7 +170,7 @@
             ?>
         </select></p>
 
-        <p>Twice - $<?= $lightstickPrices['Twice'] ?>
+        <p>Twice - ₱<?= $lightstickPrices['Twice'] ?>
         <select id="twiceLightstick">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -180,7 +180,7 @@
         </select></p>
 
         <h3>♬ Albums:</h3>
-        <p>BTS - $<?= $albumPrices['BTS'] ?>
+        <p>BTS - ₱<?= $albumPrices['BTS'] ?>
         <select id="btsAlbum">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -189,7 +189,7 @@
             ?>
         </select></p>
 
-        <p>BOYNEXTDOOR - $<?= $albumPrices['BOYNEXTDOOR'] ?>
+        <p>BOYNEXTDOOR - ₱<?= $albumPrices['BOYNEXTDOOR'] ?>
         <select id="bndAlbum">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -198,7 +198,7 @@
             ?>
         </select></p>
 
-        <p>New Jeans - $<?= $albumPrices['New Jeans'] ?>
+        <p>New Jeans - ₱<?= $albumPrices['New Jeans'] ?>
         <select id="njAlbum">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -207,7 +207,7 @@
             ?>
         </select></p>
 
-        <p>Twice - $<?= $albumPrices['Twice'] ?>
+        <p>Twice - ₱<?= $albumPrices['Twice'] ?>
         <select id="twiceAlbum">
             <?php 
             for ($i = 0; $i <= 5; $i++) {
@@ -229,56 +229,56 @@
         // Adds and computes the selected merch and prints the bill
         var qty = parseInt(document.getElementById('btsLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Army Bomb - BTS" + " = $<?= $lightstickPrices['BTS'] ?> " + "\n"; 
+            itemsList += qty + " Army Bomb - BTS" + " = ₱<?= $lightstickPrices['BTS'] ?> " + "\n"; 
             total += qty * <?= $lightstickPrices['BTS'] ?>; 
         }
         
         qty = parseInt(document.getElementById('bndLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Wonder Stick - BOYNEXTDOOR" + " = $<?= $lightstickPrices['BOYNEXTDOOR'] ?>" + " \n"; 
+            itemsList += qty + " Wonder Stick - BOYNEXTDOOR" + " = ₱<?= $lightstickPrices['BOYNEXTDOOR'] ?>" + " \n"; 
             total += qty * <?= $lightstickPrices['BOYNEXTDOOR'] ?>; 
         }
 
         qty = parseInt(document.getElementById('njLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Binky Bong - New Jeans" + " = $<?= $lightstickPrices['New Jeans'] ?>" + " \n"; 
+            itemsList += qty + " Binky Bong - New Jeans" + " = ₱<?= $lightstickPrices['New Jeans'] ?>" + " \n"; 
             total += qty * <?= $lightstickPrices['New Jeans'] ?>; 
         }
 
         qty = parseInt(document.getElementById('twiceLightstick').value);
         if (qty > 0) { 
-            itemsList += qty + " Candy Bong - Twice" + " = $<?= $lightstickPrices['Twice'] ?>" + " \n"; 
+            itemsList += qty + " Candy Bong - Twice" + " = ₱<?= $lightstickPrices['Twice'] ?>" + " \n"; 
             total += qty * <?= $lightstickPrices['Twice'] ?>; 
         }
 
         qty = parseInt(document.getElementById('btsAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " BTS Album" + " = $<?= $albumPrices['BTS'] ?>" + " \n"; 
+            itemsList += qty + " BTS Album" + " = ₱<?= $albumPrices['BTS'] ?>" + " \n"; 
             total += qty * <?= $albumPrices['BTS'] ?>; 
         }
 
         qty = parseInt(document.getElementById('bndAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " BOYNEXTDOOR Album" + " = $<?= $albumPrices['BOYNEXTDOOR'] ?>" + " \n"; 
+            itemsList += qty + " BOYNEXTDOOR Album" + " = ₱<?= $albumPrices['BOYNEXTDOOR'] ?>" + " \n"; 
             total += qty * <?= $albumPrices['BOYNEXTDOOR'] ?>; 
         }
 
         qty = parseInt(document.getElementById('njAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " New Jeans Album" + " = $<?= $albumPrices['New Jeans'] ?>" + " \n"; 
+            itemsList += qty + " New Jeans Album" + " = ₱<?= $albumPrices['New Jeans'] ?>" + " \n"; 
             total += qty * <?= $albumPrices['New Jeans'] ?>; 
         }
 
         qty = parseInt(document.getElementById('twiceAlbum').value);
         if (qty > 0) { 
-            itemsList += qty + " Twice Album" + " = $<?= $albumPrices['Twice'] ?>" + " \n"; 
+            itemsList += qty + " Twice Album" + " = ₱<?= $albumPrices['Twice'] ?>" + " \n"; 
             total += qty * <?= $albumPrices['Twice'] ?>; 
         }
 
         if (total > 0) {
             alert("Items selected:\n" + itemsList + "\n" +
                 "-----------------------------" +
-                  "\nTotal: $" + total + 
+                  "\nTotal: ₱" + total + 
                   "\n\n♡Thank you for ordering at Kverse Kpop Store! Your order bill will be emailed shortly. (づ｡◕‿‿◕｡)づ");
         } else {
             alert("Please select at least one item!");
