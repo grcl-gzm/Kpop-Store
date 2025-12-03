@@ -1,47 +1,21 @@
 <?php
-
     declare(strict_types=1);
-
     $taxRate = 12;  // 12% tax rate - global variable
     
     // Currency symbol for the table
     $currency = '₱';
-
-
+    
     // Multidimensional array for the products
     $kpopMerch = [
-        'Army Bomb - BTS' => [
-            'price' => 2480.00,
-            'stockLevel' => 0
-        ],
-        'Wonder Stick - BOYNEXTDOOR' => [
-            'price' => 2200.00,
-            'stockLevel' => 3
-        ],
-        'Binky Bong - New Jeans' => [
-            'price' => 2030.00,
-            'stockLevel' => 13
-        ],
-        'Candy Bong - Twice' => [
-            'price' => 2480.00,
-            'stockLevel' => 8
-        ],
-        'Map of the Soul: 7 Album - BTS ' => [
-            'price' => 1360.00,
-            'stockLevel' => 12
-        ],
-        'No Genre Album - BOYNEXTDOOR ' => [
-            'price' => 1520.00,
-            'stockLevel' => 10
-        ],
-        'Supernatural Album - New Jeans' => [
-            'price' => 1680.00,
-            'stockLevel' => 3
-        ],
-        'Eyes Wide Open Album - Twice' => [
-            'price' => 1800.00,
-            'stockLevel' => 2   
-        ],
+        'Army Bomb - BTS' => [ 'price' => 2480.00, 'stockLevel' => 0 ],
+
+        'Wonder Stick - BOYNEXTDOOR' => [ 'price' => 2200.00, 'stockLevel' => 3 ],
+        'Binky Bong - New Jeans' => [ 'price' => 2030.00, 'stockLevel' => 13 ],
+        'Candy Bong - Twice' => [ 'price' => 2480.00, 'stockLevel' => 8 ],
+        'Map of the Soul: 7 Album - BTS ' => [ 'price' => 1360.00, 'stockLevel' => 12],
+        'No Genre Album - BOYNEXTDOOR ' => [ 'price' => 1520.00, 'stockLevel' => 10],
+        'Supernatural Album - New Jeans' => [ 'price' => 1680.00, 'stockLevel' => 3 ],
+        'Eyes Wide Open Album - Twice' => [ 'price' => 1800.00, 'stockLevel' => 2],
     ];
 
     // Functions
@@ -106,9 +80,6 @@
             <?php endforeach; ?>
         </tbody>
     </table>
-
     <?php include 'footerStore.php'; ?>
-
-    
 </body>
 </html>
